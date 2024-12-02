@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>DevOpsified the Go Application</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,32 +60,55 @@
                 <li><a href="home">Home</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href="contact">Contact</a></li>
-                <li><a href="courses">Courses</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h1>Learn DevOps from Basics</h1>
-            <p>The main purpose of this website is to guide people on how to learn DevOps 
-                from basics for Free. We will provide you with the best resources to learn.
-            </p>
+            <h1>DevOpsified the Go Application</h1>
+            <p>This project demonstrates the complete **DevOps** lifecycle for a Go application, from development to deployment in a **cloud-native environment**. By leveraging modern **containerization**, **CI/CD** practices, and **Kubernetes**, this project automates the build, testing, and deployment processes, ensuring a fast and reliable workflow.</p>
         </section>
 
         <section>
-            <h2>Overview</h2>
-            <p> Zero to Hero courses on all DevOps tools and popular Cloud(AWS and Azure) platform</p>
+            <h2>Project Overview</h2>
+            <p>The goal of this project was to containerize a simple **Go** application using **Docker** and set up a **Kubernetes** environment for orchestration. The application is built and deployed using **Amazon EKS (Elastic Kubernetes Service)** and automated CI/CD workflows with **GitHub Actions** and **ArgoCD** for continuous delivery.</p>
         </section>
 
         <section>
-            <h2>Courses Offered</h2>
-            <p>Please look at the <a href="courses">courses</a> section.</p>  
+            <h2>Key Technologies Used</h2>
+            <ul>
+                <li><strong>Go</strong>: Backend application written in Go.</li>
+                <li><strong>Docker</strong>: **Multistage Dockerfile** for containerizing the Go application.</li>
+                <li><strong>Kubernetes</strong>: For managing the deployment and scaling of the application in a cloud environment.</li>
+                <li><strong>Amazon EKS</strong>: A fully managed Kubernetes service for deploying the application in the cloud.</li>
+                <li><strong>GitHub Actions</strong>: Used for building and testing the application automatically on every commit.</li>
+                <li><strong>ArgoCD</strong>: A declarative, GitOps continuous delivery tool to automate deployment on Kubernetes.</li>
+                <li><strong>Helm</strong>: Used for managing Kubernetes packages, providing an easy way to define, install, and upgrade applications.</li>
+                <li><strong>Ingress Controller</strong>: Set up for routing and load balancing of external traffic to the application.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Deployment Process</h2>
+            <p>The entire deployment process is automated and consists of several stages:</p>
+            <ol>
+                <li><strong>Build & Test</strong>: The application is built using a **Multistage Dockerfile** to ensure the smallest possible image size. Unit tests are run in the CI pipeline using **GitHub Actions**.</li>
+                <li><strong>Containerization</strong>: The application is containerized using Docker, with multi-stage builds to separate the build environment from the final runtime environment.</li>
+                <li><strong>Deployment on Kubernetes</strong>: The Kubernetes deployment, service, and ingress resources are defined using YAML files. The application is then deployed to **Amazon EKS** with Helm charts, ensuring scalability and ease of management.</li>
+                <li><strong>Continuous Deploymehttp.HandleFunc("/courses", coursePage)nt</strong>: Using **ArgoCD**, changes to the Git repository are automatically applied to the Kubernetes cluster, ensuring continuous deployment of the latest version of the application.</li>
+                <li><strong>Load Balancing</strong>: An **Ingress Controller** is used to manage external traffic and distribute it across multiple instances of the application, providing load balancing and high availability.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>This project showcases the power of modern DevOps practices and tools to automate and streamline the software development and deployment lifecycle. The use of Docker, Kubernetes, and cloud-native services such as Amazon EKS makes it highly scalable and efficient. Additionally, integrating CI/CD pipelines with GitHub Actions and ArgoCD allows for a seamless, automated deployment process, ensuring the application is always up-to-date with minimal manual intervention.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Abhishek.Veeramalla</p>
+        <p>&copy; 2023 Saurabh Prakash</p>
     </footer>
 </body>
 </html>
